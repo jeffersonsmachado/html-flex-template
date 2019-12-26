@@ -1,0 +1,77 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --main-height: 100vh;
+    --header-height: 100px;
+    --footer-height: 100px;
+    --body-margin: 20px;
+    --main-padding: 5px;
+    --main-border-width: 1px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+}
+
+body {
+    background-color: coral;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: calc(var(--main-height) - calc(var(--body-margin) * 2));
+    margin: var(--body-margin);
+}
+
+#content-footer {
+    flex-grow: 1;
+    padding-top: 20px !important;
+    padding-bottom:
+        calc(
+            var(--footer-height) + var(--body-margin) * 2
+            + 16px
+        ) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - var(--main-padding) * 2 - var(--main-border-width) * 2);
+}
+
+footer > div {
+    height: var(--footer-height);
+}
+
+
+#CONTAINER-PRIMARY,
+header,
+#content,
+#content-footer,
+footer,
+.container-primary {
+    background-color: slateblue;
+    border: var(--main-border-width) solid black;
+    padding: var(--main-padding);
+}
+
+#CONTAINER-SECONDARY,
+#square,
+.container-secondary {
+    background-color: seagreen;
+    border: var(--main-border-width) solid black;
+    padding: var(--main-padding);
+}
+
+
+#square {
+    width: 100px;
+    height: 100px;
+    width: 100%;
+}
